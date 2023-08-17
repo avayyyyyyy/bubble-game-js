@@ -1,4 +1,3 @@
-// var timeValue = document.querySelector('#timer');
 var time = 60;
 var hit = 0;
 var score = 0;
