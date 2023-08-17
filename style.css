@@ -1,19 +1,24 @@
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* Apply general styles to all elements */
 * {
     padding: 0;
     margin: 0;
+    user-select: none;
     box-sizing: border-box;
 }
 
+/* Set base font size and font family for the entire document */
 html,
 body {
     height: 100%;
     width: 100%;
     font-family: 'Montserrat', sans-serif;
-    /* font-family: 'Poppins', sans-serif; */
+    font-size: 16px;
 }
 
+/* Apply styles to the main wrapper */
 #wrapper {
     height: 100%;
     width: 100%;
@@ -21,64 +26,69 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    align-items: center;
     background: rgb(26, 50, 134);
     background: linear-gradient(0deg, rgba(0, 228, 255, 1) 0%, rgba(26, 50, 134, 1) 100%);
 }
 
+/* Style the main heading */
 #wrapper h1 {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     color: white;
-    font-weight: 500;
+    font-weight: 700;
 }
 
+/* Style the inner wrapper */
 #inner-wrapper {
     height: 80%;
     width: 80%;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     background-color: white;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     align-items: center;
 }
 
+/* Style the top section */
 #top {
-    height: 60px;
+    height: 3.75rem;
+    /* Equivalent to 60px */
     width: 100%;
     background: rgb(26, 88, 134);
     background: linear-gradient(0deg, rgba(26, 88, 134, 1) 0%, rgba(0, 172, 255, 1) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 0.625rem;
 }
 
+/* Style the boxes in the top section */
 #top #box {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 0.625rem;
     color: white;
 }
 
+/* Style the spans in the top section */
 #top #box span {
     background-color: white;
-    padding: 4px;
-    min-width: 20px;
-    min-height: 20px;
+    padding: 0.25rem 0.5rem;
+    width: fit-content;
+    height: 1.875rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 2px;
+    border-radius: 0.125rem;
     font-weight: 700;
     color: black;
 }
 
+/* Style the circle element */
 #circle {
-    height: 40px;
-    width: 40px;
+    height: 2.5rem;
+    width: 2.5rem;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -94,13 +104,34 @@ body {
     cursor: pointer;
 }
 
+/* Style the main game body */
 #body {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 0.625rem;
     flex-wrap: wrap;
-    gap: 5px;
-    height: calc(100% - 60px);
-    align-items: center;
+    gap: 0.3125rem;
+    height: calc(100% - 3.75rem);
+    width: 100%;
+}
+
+/* Style the heading inside the game body */
+#body h1 {
+    color: black;
+}
+
+/* Add the responsive styles here */
+@media (max-width: 48rem) {
+
+    #inner-wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width: 30rem) {
+
+    #inner-wrapper {
+        width: 95%;
+    }
 }
